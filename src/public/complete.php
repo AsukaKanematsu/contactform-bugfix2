@@ -13,7 +13,7 @@ if (empty($title) || empty($email) || empty($content)) {
       ';
 }
 
-if (empty($title) && empty($email) && empty($content)) {
+if (!empty($title) && !empty($email) && !empty($content)) {
     $dbUserName = 'root';
     $dbPassword = 'password';
     $pdo = new PDO(
